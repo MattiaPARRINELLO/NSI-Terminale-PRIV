@@ -1,0 +1,5 @@
+{
+  "python.testing.pytestArgs": ["[Chapitre 2] - POO"],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true
+}
