@@ -120,3 +120,13 @@ class liste_chainee():
             length += 1 # On incrémente la longueur
             actuel = actuel.suivant # On passe au chainon suivant
         return length # On retourne la longueur
+    
+
+
+    def lcToList(self):
+        actuel = self.premier
+        liste = []
+        while actuel != None:
+            liste.append(actuel.valeur)
+            actuel = actuel.suivant
+        return liste

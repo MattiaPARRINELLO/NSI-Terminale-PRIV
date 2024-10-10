@@ -52,11 +52,15 @@ def menu():
         else:
             print_colored("Liste : " + str(liste), "cyan")
         print_colored("Dernier retour : " + str(last_return), "green")
+        last_return = None
         print_colored("--------------------", "orange")
         input_user = input("Que voulez vous faire ? ") 
 
         if input_user == "1":
-            print(liste)
+            if len(liste) > 150:
+                last_return = (liste.tete(), " ... ", liste.fin())
+            else:
+                last_return = (liste)
 
         elif input_user == "2":
             valeur = input("Quelle valeur voulez vous ajouter ? ")
@@ -85,7 +89,10 @@ def menu():
             last_return = liste.tete()
 
         elif input_user == "9":
-            last_return = liste.queue()
+            if len(liste.queue())>150:
+                last_return = ("-> ",liste.queue()[0], " ... ", liste.queue()[-1])
+            else:
+                last_return = liste.queue()
 
         elif input_user == "10":
             print_colored("Au revoir !", "blue")
