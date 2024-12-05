@@ -1,6 +1,5 @@
 import unittest
-
-from Structure import Arbre
+from MAIN import Arbre
 
 class TestArbre(unittest.TestCase):
     def test_initialization(self):

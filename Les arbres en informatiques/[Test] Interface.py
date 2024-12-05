@@ -1,6 +1,5 @@
 import unittest
-
-from Interface import Arbre
+from MAIN import Arbre
 
 class TestArbre(unittest.TestCase):
 
