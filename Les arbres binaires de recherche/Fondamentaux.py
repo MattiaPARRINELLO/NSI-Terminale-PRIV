@@ -31,7 +31,7 @@ class ABR:
         else:
             if self.droite is None:
                 return False
-            return self.droite.rechcercher(valeur)
+            return self.droite.rechercher(valeur)
         
     def inserer(self, valeur):
         """
@@ -42,12 +42,16 @@ class ABR:
             L'ABR mis à jour avec la nouvelle valeur insérée.
         """
 
-        if self is None:
-            return ABR(valeur)
         
         if valeur < self.valeur:
-            self.gauche = self.gauche.inserer(valeur) if self.gauche else ABR(valeur)
+            if self.gauche is None:
+                self.gauche = ABR(valeur)
+            else:
+                self.gauche.inserer(valeur)
         else:
-            self.droite = self.droite.inserer(valeur) if self.gauche else ABR(valeur)
+            if self.droite is None:
+                self.droite = ABR(valeur)
+            else:
+                self.droite.inserer(valeur)
         return self
         
