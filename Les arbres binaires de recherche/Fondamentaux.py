@@ -51,7 +51,7 @@ class ABR:
         else:
             if self.droite is None:
                 self.droite = ABR(valeur)
-            else:
+            else:f
                 self.droite.inserer(valeur)
         return self
         
