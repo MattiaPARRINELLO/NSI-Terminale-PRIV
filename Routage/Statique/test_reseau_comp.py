@@ -50,3 +50,4 @@ def test_reseau_complet():
 
 if __name__ == "__main__":
     test_reseau_complet()
+    input("Appuyez sur une touche pour continuer...")
